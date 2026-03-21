@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ConnectX iOS Replica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- SF Pro Display approximation -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="iphone-hardware">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="time" id="clock">9:41</div>
+            <div class="notch-container">
+                <div class="notch">
+                    <div class="speaker"></div>
+                    <div class="camera"></div>
+                </div>
+            </div>
+            <div class="system-icons">
+                <svg class="icon-signal" viewBox="0 0 18 12" fill="white">
+                    <rect y="8" width="3" height="4" rx="1" />
+                    <rect x="5" y="6" width="3" height="6" rx="1" />
+                    <rect x="10" y="3" width="3" height="9" rx="1" />
+                    <rect x="15" width="3" height="12" rx="1" />
+                </svg>
+                <svg class="icon-wifi" viewBox="0 0 16 12" fill="white">
+                    <path
+                        d="M8 12c.55 0 1-.45 1-1s-.45-1-1-1-1 .45-1 1 .45 1 1 1ZM12.5 8.5C11.2 7.2 9.7 6.5 8 6.5C6.3 6.5 4.8 7.2 3.5 8.5"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" />
+                    <path d="M16 5C13.8 2.8 11.1 1.5 8 1.5 4.9 1.5 2.2 2.8 0 5" stroke="white" stroke-width="1.5"
+                        stroke-linecap="round" fill="none" />
+                </svg>
+                <div class="battery">
+                    <div class="battery-level"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activation zone to swipe down Control Center -->
+        <div class="cc-pull-zone" id="top-pull-zone"></div>
+
+        <!-- HOME SCREEN -->
+        <div class="home-screen" id="home-screen">
+            <div class="app-grid">
+                <!-- Row 1 -->
+                <div class="app">
+                    <div class="app-icon" style="background:linear-gradient(to bottom, #72c3fc, #0a84ff)"><svg style="width:34px; margin-top:14px" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M4 7l8 5 8-5M4 7v10h16V7H4z"/></svg></div><span>Mail</span>
+                </div>
+                <div class="app">
+                    <div class="app-icon calendar"><b>Tuesday</b><br>12</div><span>Calendar</span>
+                </div>
+                <div class="app">
+                    <div class="app-icon photos"><img
+                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='30' r='20' fill='%23FFD500'/><circle cx='70' cy='50' r='20' fill='%23FF3B30'/><circle cx='50' cy='70' r='20' fill='%235856D6'/><circle cx='30' cy='50' r='20' fill='%2334C759'/></svg>">
+                    </div><span>Photos</span>
+                </div>
+                <div class="app">
+                    <div class="app-icon" style="background:#8e8e93"><svg style="width:34px; margin-top:14px" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2"><rect x="3" y="8" width="18" height="12" rx="2"/><circle cx="12" cy="14" r="3"/><path d="M7 8V6a2 2 0 012-2h6a2 2 0 012 2v2"/></svg></div><span>Camera</span>
+                </div>
+                <!-- Row 2 -->
+                <div class="app">
+                    <div class="app-icon map"><img
+                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M10 10l30 20v60L10 70Z' fill='%2334C759'/><path d='M40 30l30-20v60L40 90Z' fill='%23FFE620'/><path d='M70 10l20 20v60L70 70Z' fill='%23FF3B30'/></svg>">
+                    </div><span>Maps</span>
+                </div>
+                <div class="app">
+                    <div class="app-icon clock">
+                        <div class="pin"></div>
+                    </div><span>Clock</span>
+                </div>
+                <div class="app">
+                    <div class="app-icon" style="background:linear-gradient(to bottom, #5ac8fa, #0a84ff)"><svg style="width:34px; margin-top:14px" viewBox="0 0 24 24" fill="white"><path d="M17 12a4 4 0 00-7.8-1.2 3 3 0 00-2.2 5.2h10a4 4 0 000-4z"/><circle cx="16" cy="7" r="2" fill="#ffd500"/></svg></div><span>Weather</span>
+                </div>
+                <div class="app">
+                    <div class="app-icon" style="background:linear-gradient(to bottom, #ff5e62, #ff3b30)"><svg style="width:34px; margin-top:14px" viewBox="0 0 24 24" fill="white"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-5 13H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V6h10v2z"/></svg></div><span>News</span>
+                </div>
+                <!-- Row 3 -->
+                <div class="app">
+                    <div class="app-icon" style="background:#ff9500"><svg style="width:34px; margin-top:14px" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div><span>Home</span>
+                </div>
+                <div class="app">
+                    <div class="app-icon" style="background:#ffcc00; border-top: 15px solid white;"><svg style="margin-top:-10px; width:34px" viewBox="0 0 24 24" stroke="black" stroke-width="1"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="13" x2="20" y2="13"/><line x1="4" y1="18" x2="20" y2="18"/></svg></div>
+                    <span>Notes</span>
+                </div>
+                <div class="app">
+                    <div class="app-icon" style="background:#1c1c1e;"><svg style="width:34px; margin-top:14px" viewBox="0 0 24 24" fill="none" stroke="#34c759" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/></svg></div>
+                    <span>Stocks</span>
+                </div>
+                <div class="app">
+                    <div class="app-icon" style="background:white; border:2px solid #e5e5ea;"><svg style="width:34px; margin-top:14px" viewBox="0 0 24 24" stroke="black" stroke-width="2"><circle cx="5" cy="6" r="1" fill="red"/><circle cx="5" cy="12" r="1" fill="orange"/><circle cx="5" cy="18" r="1" fill="green"/><line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/></svg></div>
+                    <span>Reminders</span>
+                </div>
+                <!-- Row 4 -->
+                <div class="app">
+                    <div class="app-icon" style="background:black"><svg style="width:34px; margin-top:14px" viewBox="0 0 24 24" fill="white"><path d="M20 5H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V7a2 2 0 00-2-2zM4 17V7h16v10z"/><circle cx="12" cy="12" r="2"/></svg></div><span>TV</span>
+                </div>
+                <div class="app">
+                    <div class="app-icon" style="background:#0a84ff"><svg style="width:34px; margin-top:14px" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M12 4l-6 15m6-15l6 15m-10-6h8"/></svg></div><span>App Store</span>
+                </div>
+                <div class="app">
+                    <div class="app-icon" style="background:#af52de"><svg style="width:34px; margin-top:14px" viewBox="0 0 24 24" fill="white"><path d="M12 2L15 9h8l-6 5 2 8-7-5-7 5 2-8-6-5h8z"/></svg></div><span>iTunes Store</span>
+                </div>
+                <div class="app">
+                    <div class="app-icon" style="background:#ff9500"><svg style="width:34px; margin-top:14px" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div><span>iBooks</span>
+                </div>
+                <!-- Row 5 -->
+                <div class="app">
+                    <div class="app-icon" style="background:white"><svg style="width:38px; margin-top:12px" viewBox="0 0 24 24" fill="#ff3b30"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div><span>Health</span>
+                </div>
+                <div class="app">
+                    <div class="app-icon" style="background:#1c1c1e"><svg style="width:34px; margin-top:14px" viewBox="0 0 24 24" fill="none" stroke="#ff9500" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2" stroke="white"/><circle cx="17" cy="12" r="1"/></svg></div><span>Wallet</span>
+                </div>
+                <div class="app">
+                    <div class="app-icon" style="background:#8e8e93"><svg style="width:32px; margin-top:15px" viewBox="0 0 24 24" fill="#e5e5ea" stroke="#1c1c1e" stroke-width="1"><circle cx="12" cy="12" r="4"/><path d="M19.4 15a1.65 1.65 0 00.3 1.8l1 1a2 2 0 01-2.8 2.8l-1-1a1.65 1.65 0 00-1.8-.3 1.65 1.65 0 00-1 1.5v1.5a2 2 0 01-4 0v-1.5a1.65 1.65 0 00-1-1.5 1.65 1.65 0 00-1.8.3l-1 1a2 2 0 01-2.8-2.8l1-1a1.65 1.65 0 00.3-1.8 1.65 1.65 0 00-1.5-1h-1.5a2 2 0 010-4h1.5a1.65 1.65 0 001.5-1 1.65 1.65 0 00-.3-1.8l-1-1a2 2 0 012.8-2.8l1 1a1.65 1.65 0 001.8.3h.1a1.65 1.65 0 001-1.5V3a2 2 0 014 0v1.5a1.65 1.65 0 001 1.5h.1a1.65 1.65 0 001.8-.3l1-1a2 2 0 012.8 2.8l-1 1a1.65 1.65 0 00-.3 1.8 1.65 1.65 0 001.5 1h1.5a2 2 0 010 4h-1.5a1.65 1.65 0 00-1.5 1z"/></svg></div><span>Settings</span>
+                </div>
+            </div>
+
+            <div class="page-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Dock -->
+            <div class="dock-container">
+                <div class="dock">
+                    <div class="app-icon" style="background:#34c759"><svg style="width:36px; margin-top:13px" viewBox="0 0 24 24" fill="white"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.31-.3.73-.4 1.11-.27 1.21.4 2.53.61 3.88.61h3.5c.55 0 1-.45 1-1C24 9.6 14.4 0 6.5 0c-.55 0-1 .45-1 1v3.5c0 1.35.21 2.67.61 3.88.13.38.03.8-.27 1.11l-2.22 2.3z"/></svg></div>
+                    <div class="app-icon" style="background:white"><svg style="width:38px; margin-top:12px" viewBox="0 0 24 24" fill="none" stroke="#0a84ff" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M16 8l-3 9-5-2 3-9 5 2z" fill="#0a84ff"/><path d="M13.5 10.5l-1.5-1.5" stroke="#ff3b30" stroke-width="2" stroke-linecap="round"/></svg></div>
+                    <div class="app-icon" style="background:#34c759"><svg style="width:36px; margin-top:13px" viewBox="0 0 24 24" fill="white"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 018.5-8.5 8.5 8.5 0 018.5 8.5z"/></svg></div>
+                    <div class="app-icon" style="background:#ff2d55"><svg style="width:34px; margin-top:14px" viewBox="0 0 24 24" fill="white"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTROL CENTER -->
+        <div class="control-center" id="control-center">
+            <!-- Blurred Background overlay already on .control-center -->
+            <div class="cc-content">
+                <div class="cc-row">
+                    <!-- Connectivity 2x2 -->
+                    <div class="cc-module cc-grid-2x2">
+                        <div class="cc-circle toggle-airplane">
+                            <div class="icon airplane"></div>
+                        </div>
+                        <div class="cc-circle active toggle-cellular">
+                            <div class="icon cellular"></div>
+                        </div>
+                        <div class="cc-circle active toggle-wifi">
+                            <div class="icon wifi"></div>
+                        </div>
+                        <div class="cc-circle active toggle-bluetooth">
+                            <div class="icon bluetooth"></div>
+                        </div>
+                    </div>
+                    <!-- Media 2x2 -->
+                    <div class="cc-module cc-media">
+                        <p class="media-title">Not Playing</p>
+                        <div class="media-controls">
+                            <div class="play-btn">▶</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cc-row">
+                    <div class="cc-col">
+                        <div class="cc-row-small">
+                            <div class="cc-module cc-1x1">
+                                <div class="icon orientation"></div>
+                            </div>
+                            <div class="cc-module cc-1x1">
+                                <div class="icon mirror"></div>
+                            </div>
+                        </div>
+                        <!-- The ConnectX Custom Tile -->
+                        <div class="cc-module cc-2x1 connectx-tile" id="btn-connectx">
+                            <div class="connectx-icon"><span>X</span></div>
+                            <span class="connectx-label">ConnectX</span>
+                        </div>
+                    </div>
+                    <div class="cc-col">
+                        <div class="cc-row-small sliders">
+                            <div class="cc-module cc-slider">
+                                <div class="slider-icon sun"></div>
+                                <div class="slider-fill" style="height: 60%"></div>
+                            </div>
+                            <div class="cc-module cc-slider">
+                                <div class="slider-icon vol"></div>
+                                <div class="slider-fill" style="height: 30%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cc-row tools">
+                    <div class="cc-module cc-1x1">
+                        <div class="icon flashlight"></div>
+                    </div>
+                    <div class="cc-module cc-1x1">
+                        <div class="icon timer"></div>
+                    </div>
+                    <div class="cc-module cc-1x1">
+                        <div class="icon calc"></div>
+                    </div>
+                    <div class="cc-module cc-1x1">
+                        <div class="icon cam"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cc-close-hint">Swipe up to close</div>
+        </div>
+
+        <!-- MODAL OVERLAY -->
+        <div class="modal-overlay" id="modal-overlay"></div>
+
+        <!-- CONNECTX: Step 1 (Share Data) -->
+        <div class="glass-modal" id="modal-share">
+            <div class="modal-header">
+                <h3>Share Data</h3>
+                <button class="close-btn" onclick="closeAllModals()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="input-block">
+                    <label>Mobile Number</label>
+                    <input type="tel" id="mobile-number" placeholder="+91 98765 43210" maxlength="15">
+                    <div class="error-text" id="phone-error">Please enter a valid 10-digit Indian number</div>
+                </div>
+
+                <div class="input-block">
+                    <label>Select Data Limit</label>
+                    <div class="data-options">
+                        <button class="data-opt" data-val="500MB">500 MB</button>
+                        <button class="data-opt active" data-val="1GB">1 GB</button>
+                        <button class="data-opt" data-val="1.5GB">1.5 GB</button>
+                    </div>
+                </div>
+
+                <button class="primary-btn mt-4" id="btn-send-otp">Send OTP</button>
+            </div>
+        </div>
+
+        <!-- CONNECTX: Step 2 (OTP Verification) -->
+        <div class="glass-modal" id="modal-otp">
+            <div class="modal-header">
+                <button class="back-btn" id="btn-back-otp">←</button>
+                <h3>Verify OTP</h3>
+                <div style="width:28px"></div>
+            </div>
+            <div class="modal-body text-center">
+                <p class="subtitle">Enter the 4-digit code sent to <br><b id="display-number"></b></p>
+
+                <div class="otp-inputs">
+                    <input type="text" maxlength="1" class="otp-box">
+                    <input type="text" maxlength="1" class="otp-box">
+                    <input type="text" maxlength="1" class="otp-box">
+                    <input type="text" maxlength="1" class="otp-box">
+                </div>
+                <div class="error-text mt-2" id="otp-error">Please enter complete OTP</div>
+
+                <button class="primary-btn mt-4" id="btn-verify">Verify & Transfer</button>
+            </div>
+        </div>
+
+        <!-- CONNECTX: Loading State -->
+        <div class="glass-modal centered-content" id="modal-loading">
+            <div class="spinner"></div>
+            <p class="loading-text">Processing Transfer...</p>
+        </div>
+
+        <!-- CONNECTX: Step 3 (Success) -->
+        <div class="glass-modal centered-content" id="modal-success">
+            <div class="success-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h3>Transfer Successful!</h3>
+            <p class="subtitle mt-2"><b id="success-data">1GB</b> data has been transferred securely to <br><b
+                    id="success-number"></b>.</p>
+            <button class="primary-btn mt-4" onclick="closeAllModals()">Done</button>
+        </div>
+
+        <!-- Home Indicator -->
+        <div class="home-indicator"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
