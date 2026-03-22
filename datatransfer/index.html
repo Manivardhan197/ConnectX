@@ -228,6 +228,10 @@
                 <button class="close-btn" onclick="closeAllModals()">×</button>
             </div>
             <div class="modal-body">
+                <div class="user-data-info mb-3">
+                    <span class="info-label">Available Data:</span>
+                    <span class="info-value" id="available-data">2.5 GB</span>
+                </div>
                 <div class="input-block">
                     <label>Mobile Number</label>
                     <input type="tel" id="mobile-number" placeholder="+91 98765 43210" maxlength="15">
@@ -285,6 +289,10 @@
             <h3>Transfer Successful!</h3>
             <p class="subtitle mt-2"><b id="success-data">1GB</b> data has been transferred securely to <br><b
                     id="success-number"></b>.</p>
+            <div class="user-data-info mt-4" style="width:100%; text-align:left;">
+                <span class="info-label">Remaining Data:</span>
+                <span class="info-value" id="remaining-data">---</span>
+            </div>
             <button class="primary-btn mt-4" onclick="closeAllModals()">Done</button>
         </div>
 

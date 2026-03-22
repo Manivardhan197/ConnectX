@@ -152,6 +152,14 @@ btnVerify.addEventListener('click', () => {
         document.getElementById('success-data').innerText = selectedData;
         document.getElementById('success-number').innerText = inputMobile.value;
 
+        // Calculate remaining data (starting at 2.5 GB)
+        let transferAmount = 1; // default 1GB
+        if(selectedData.includes('MB')) transferAmount = parseFloat(selectedData) / 1000;
+        else transferAmount = parseFloat(selectedData);
+        
+        let remain = Math.max(0, 2.5 - transferAmount).toFixed(2);
+        document.getElementById('remaining-data').innerText = remain + ' GB';
+
         modalLoading.classList.remove('active');
         modalSuccess.classList.add('active');
     }, 2000);
